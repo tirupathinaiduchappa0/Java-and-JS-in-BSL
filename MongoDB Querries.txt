@@ -1,0 +1,96 @@
+         ************************ MongoDB Querries  ******************8
+
+1) Find all documents whose name starts with t(Hint:: use $regex).
+
+2) find the users names who have morethan 2 hobbies.
+
+3)Add a new hobby Coding for the use whose name is John.
+
+4) Group Users by city and count the number of users in each city
+
+5) Aggregate users by age groups (lessthan 25, 25-35, graterthan 35) and count them.
+
+6) Incremet the age of all users by 1.
+
+7) Find users whose hobbies array containing reading and chess.
+
+8) Rename the age field to newAge for all users.
+
+9) find users who have more than one mobile number.
+
+10) If salry is less than 10k, then add 1k to all of them.
+
+11) perform a text search for users who mention "developer"
+
+in their profile. (Profile is a big description like, profile: "i am a full stack developer");
+
+12) Find users age lesthan 40 and group them by city.
+
+13) Add a new field called "salaryAfterTax" by deducting 10% from the salary.
+
+14) Find all users who have 2 hobbies only.
+
+15) Find all users who have atleast 2 hobbies.
+
+
+============================================================
+
+
+********************************************         MongoDb solutions..........   *********************8
+
+
+3)Add a new hobby Coding for the use whose name is John. (Hobbies ia an array)
+
+sol)db.bios.updateOne((name: "John"), (Spush: (hobbies: "coding")))//adding hobby
+
+db.bios.updateOne((name: "John"), ($pull: (hobbies: "chess"}})//removing hobby
+
+4) Group Users by city and count the number of users in each city
+
+sol)db.bios.aggregate([{$group:{_id: "Scompany.location.country", totalCount: ($sum:1})}])
+
+5) Aggregate users by age groups (lessthan 25, 25-35, graterthan 35) and count them.
+
+db.bios.aggregate ([(Sbucket:{ groupBy: "Sage", boundaries: [0,25,35, Infinity],
+
+default: "Other", output: (count: ($sum:1))
+
+6) Incremet the age of all users by 1.
+
+db.bios.updateMany((), (Sinc: (age:1)))
+
+7) Find users whose hobbies array containing reading and chess.
+
+db.bios.find((hobbies: (Sall: ["chess", "reading"]}})
+
+ 8) Rename the age field to newäge for all users.
+
+db.bios.updateMany((), (Srename: (age: "newAge"}})
+
+9)find users who have more than one mobile number.
+
+db.bios.find(({mobileNum: {$size: {$gt: 1}}})
+
+10)If salry is less than 10k, then add ik to all of them
+
+db.bios.updateMany((salary: ($lte: 10000)), ($inc: (salary: 1000)))
+
+11) perform a text search for users who mention "developer" in their profile. (Profile is a big description like, profile: i am a full stack developer");
+
+db.bios.createIndex((profile: "text"));
+
+db.bios.find(($text: (Ssearch: "developer")));
+
+12) Find users age lesthan 40 and group them by city. db.bios.aggregate([{$match: (age: ($lte:48))),
+
+($group: (id: "Scompany.location.country", count: {$sum:1)))
+
+12)13) Add a new field called "salaryAfterTax" by deducting 10% from the salary. db.bios.updateMany((), ($set: (salaryAfterTax: ("Ssalary") (0.9)}}) Or
+
+db.bios. aggregate([(SaddFields: (salaryAfterTax: (Smultiply: ["$salary", 0.9]}}}]) 15) Find all users who have atleast 2 hibbies. db.bios aggregate([(Sproject: (name: 1, id:@, hibbiesCount: ($size: "Shibbies."}}},
+
+14) Find all users who have 2 hibbies.
+
+ db.bios.find((hobbies: ($size:2)), (hobbies: 1, ide));
+
+($match: (hibbies. Count: ($gte:2}})

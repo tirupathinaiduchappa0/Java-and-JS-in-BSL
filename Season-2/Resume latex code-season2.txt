@@ -1,0 +1,288 @@
+\documentclass[11pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=0.5 cm, % seperation between body and page edge from the top
+    bottom=0.5 cm, % seperation between body and page edge from the bottom
+    left=0.5 cm, % seperation between body and page edge from the left
+    right=0.5 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    % pdftitle={John Doe's CV},
+    % pdfauthor={John Doe},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+% \patchcmd{\ps@customFooterStyle}{\thepage}{
+%     \color{gray}\textit{\small John Doe - Page \thepage{} of \pageref*{LastPage}}
+% }{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+% \newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+%   \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+%     \put(
+%         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+%         \LenToUnit{\paperheight-1.0 cm}
+%     ){\vtop{{\null}\makebox[0pt][c]{
+%         \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+%     }}}%
+%   }%
+% }%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    % \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Tirupathi Naidu}
+
+        \vspace{0.1 cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Hyderabad}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}tirupathinaiduchappa1@gmail.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+90-541-999-99-99}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}7995600550}}%
+        \kern 0.25 cm%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+    \section{Professional Summary}
+
+        \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+        \item  \textbf{Full Stack Developer} with overall 4 years of experience in designing, developing, and maintaining \textbf{highly scalable, secure, and performance-optimized, Fully Responsive web applications}.
+          \item Proficient in \textbf{Java, Spring Boot, Microservices, MySQL, MongoDB, JavaScript, and React.js}, with strong hands-on experience across both \textbf{backend and frontend} development.
+          \item Possess a solid background in \textbf{RESTful APIs, Microservices, and Event-Driven architectures}, delivering robust and efficient enterprise-grade applications.
+          \item Experienced in working within \textbf{Agile environments}, collaborating closely with DevOps teams, and leveraging \textbf{CI/CD pipelines} to ensure reliable, high-quality, and timely deployments.
+            \end{highlightsforbulletentries}
+        \end{onecolentry}   
+        \vspace{-18pt}
+\section{}
+
+\begin{minipage}[t]{0.6\textwidth}
+\subsection{Technical Skills}
+\begin{itemize}
+\item \textbf{Backend:} Java, Spring Boot, Microservices, RESTful APIs
+\item \textbf{Frontend:} JavaScript, React.js, TypeScript, HTML5, CSS3.
+\item \textbf{Databases:} MySQL, MongoDB
+\item \textbf{Tools} Git, GitLab, Bitbucket, Jenkins, JIRA, Confluence
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\subsection{Work Experience}
+\textbf{Infor} \\[0.3ex]
+Software Engineer – ERP Domain \\[0.3ex]
+2025/03 -- Present | Hyderabad \\[0.3ex]
+\textbf{Birlasoft} \\[0.3ex]
+Software Associate – Banking Domain \\[0.3ex]
+2022/07 -- 2025/02 | Hyderabad \\[0.5ex]
+\end{minipage}\\[0.5ex]
+
+
+
+\vspace{-25pt}
+
+    \section{Technical Expertise}
+
+% ---------- Frontend ----------
+\textbf{Frontend (React.js)}
+\vspace{0.15cm}
+
+\begin{onecolentry}
+\begin{highlightsforbulletentries}
+    \item Developed scalable and maintainable \textbf{React applications using Functional Components and Hooks}
+    (useState, useEffect, useContext, useMemo, useCallback) following best practices.
+    
+    \item Built \textbf{fully responsive and dynamic user interfaces} using
+    \textbf{JavaScript, HTML5, CSS3, Tailwind CSS, and Styled Components},
+    ensuring consistent UI/UX across devices and browsers.
+    
+    \item Integrated \textbf{RESTful APIs} into React applications using
+    \textbf{Axios / Fetch}, handling asynchronous data flow and errors.
+    
+    \item Improved global state management by \textbf{migrating from Context API to Redux Toolkit},
+    resulting in better state predictability, improved performance, and easier scalability.
+    
+    \item Enhanced application performance by creating \textbf{reusable UI components} and implementing
+    \textbf{lazy loading, code splitting, memoization, and caching techniques},
+    significantly reducing page load time.
+\end{highlightsforbulletentries}
+\end{onecolentry}
+
+\vspace{0.25cm}
+
+% ---------- Backend ----------
+\textbf{Backend (Java | Spring Boot | Microservices)}
+\vspace{0.15cm}
+
+\begin{onecolentry}
+\begin{highlightsforbulletentries}
+    \item Designed and developed \textbf{end-to-end microservices} using \textbf{Spring Boot},
+    implementing layered architecture (Controller, Service, Repository),
+    \textbf{RESTful APIs}, request validation, and proper HTTP status handling.
+    
+    \item Implemented \textbf{global exception handling}, centralized logging, and
+    \textbf{Aspect-Oriented Programming (AOP)} for cross-cutting concerns such as logging and exception management.
+    
+    \item Utilized \textbf{Java 8} features such as \textbf{Streams and Lambda expressions} to refactor code, improve readability, and reduce boilerplate, and contributed to migrating applications to \textbf{Java 17} for better performance and maintainability.
+    \item Integrated microservices using \textbf{Synchronous} and \textbf{asynchronous communication} for inter-service data exchange.
+    
+    \item Implemented \textbf{batch processing} using \textbf{Spring Batch},
+    including \textbf{range-based and file-based partitioning} to handle high-volume data efficiently.
+    
+    \item Improved application performance and scalability by implementing
+    \textbf{Redis caching}, optimizing \textbf{SQL queries}, and applying proper \textbf{indexing} strategies.
+    
+    \item Worked with \textbf{MySQL(Relational} and \textbf{MongoDB(NoSQL}, optimizing queries, and managing large datasets.
+\end{highlightsforbulletentries}
+\end{onecolentry}
+
+        
+
+        \section{Education Details}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+          
+           \item \textbf{Bachelor of Electronics and communication Engineering \textit{(2017 – 2021)} }
+           \textit{ Anil Neerukonda Institute of Technology Sciences (ANITS), Visakhapatnam - 9.3 Cgpa.}
+           
+          \item  \textbf{Intermediate \textit{(2015 -2017)}},
+           \textit{  Narayana college,Visakhapatnam - 982 marks.}
+           
+           % \textbf{School \textit{(2015)}},
+           % \textit{  social welfare school at,Amalapuram - 9.7 Cgpa.}
+        \vspace{0.10 cm}
+        \end{highlightsforbulletentries}
+    \end{onecolentry} 
+         \vspace{0.1 cm}   
+\end{document}

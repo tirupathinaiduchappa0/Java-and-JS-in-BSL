@@ -1,0 +1,87 @@
+**************************     React Interview Questions    **********************
+
+1) what is React and why it is used?
+
+2) what is JSX and why it is used?
+
+3) what is the differencw b/w state and props?
+
+4) what is prop Drilling?
+
+5) In howmany ways we can export and import things from Js Module?
+
+6)what is Virtual Dom and how it works?
+
+7) what is Reconciliation and Rendring?
+
+8)what is Diffing Algoritham?
+
+9) explain how rect works or how react rendering process happens?
+
+10) explain React Life cycle Methods? how can we overcome it Functional componet
+
+11) what is Higher Order Component?
+
+12) what is Pure component or How we can memoize components in React?
+
+13)useState is synchronous or Asynchronous in Nature? explain with example.**VVVIMP
+
+14) what is Two way Data Binding and how can you achieve it, give me with example?
+
+15) Building a form containing FirstName, LastName, Email. Use Only One UseState to manage all fields.
+
+16) what is the difference between useEffect and useLayoutEffect?
+
+17) what is the difference between usestate and useRef?
+
+18) what is useMemo and useCallBack and explain main difference between them?
+
+19) How do you call a function of child Componenent from parent Component? (HINT:: useImperativeHandle Hook)?**** 
+
+20) to pass props from parent to child (Prop Drilling), but how to pass props from child to parent (HINT:: useImperativeHandle Hook)?
+
+21) How will you design a product page where user selects the specs and shares the link to other users, it opens exact way as it was for orignal user?***
+
+22) write js programme to convert given numaric number in to Roman Number?
+
+23) What is the difference between Actual Dom (Real Dom) and Virtual dom?
+
+24) what is difference between Dom(Document Object Model) & Bom (Browser Object Model)?
+
+25) How context API works & what are dawbacks of it, why we are moving to Redux/toolkit?
+
+26) Explain how Redux store setup an Redux Toolkit setup in an application.
+
+27) How do you make Api calls in Redux(applyMiddleware(thunk))) and toolkit (createAsyncThunk(), builder.addcase()..in createslice).
+
+28) Is React oneway or twoway Binding? (Hint::One Way Binding only(we can send data from pareent to child only so oneway Binding), there are some techniques to send data from child to parent(use Imperativehandle hook), but it is not good practcice, so leave it).
+
+29) what is component compoistion in React?
+
+30) Explain the keywords subscribe, strict Mode (useStrict) in Reat?
+
+31) explain different types of componets(class comp, function comp, pure comp, Higher order comp, controllrd comp, unControllrd comp......etc)?
+
+32) what is react-router dom and any idea on querrey Param, pathParam, searchParam?
+
+33) What is local storage and sesssion storage and tell me some difference b/w them?
+
+34) explain how setTimeout and setinterval works & what is the main differnce b/w them?
+
+
+////////////////////////////////////    Coding Questions on React   //////////////////////////
+
+
+1) Based on country selection(1st select tag) respective country cities should be displayed in 2nd dropdown.
+
+2)Display list of items along with delete button for each item and this delete btn should appear on click of checkbox which is infront of listItem.
+
+3) onClick of radio button respectve value should be printed in console.
+
+4)whats is the use of dangerouslySetInnerHtml and give me one example?How can we use Html string in react with html code needs to work?
+
+5)if user stops typing in input field then print that whole value (HINT:: Debounce Concept)...
+
+
+
+

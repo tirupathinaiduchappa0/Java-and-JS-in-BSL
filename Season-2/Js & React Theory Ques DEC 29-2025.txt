@@ -1,0 +1,2 @@
+1)What is Temporal Dead Zone (TDZ) in JavaScript?
+2)What is illegal shadowing in JavaScript?

@@ -1,0 +1,27 @@
+1)What happens if we change the main method parameter from String[] args to Integer[] args in Java? Will the program compile and run? Explain why.
+2)What is the JIT (Just-In-Time) Compiler in Java? Why is it needed? What are its uses, and what would happen if JIT were not present?
+3)How does Java achieve platform independence? Explain the role of bytecode and JVM.
+4)What is the intern() method in Java String class? How does it work? Explain with examples.
+5).Explain pass-by-value and pass-by-reference. How does Java handle parameter passing? Explain with examples. Also explain how it works in JavaScript.
+6)Explain HashMap and ConcurrentHashMap in Java. How do they work internally? What are the differences between them?
+7)“In how many ways can we create objects in Java? Explain each way with examples.
+8)What is a Marker Interface in Java? Why does it not have any methods? Explain its use with examples.
+9)
+////////////////SpringBoot//////////
+1)Explain how @RestController works in Spring Boot and how it differs from @Controller. When would you use each?
+2)Explain why ambiguity occurs when autowiring an interface with multiple implementations in Spring. How do @Primary and @Qualifier resolve it?
+3)Explain @SpringBootApplication and the purpose of @ComponentScan, @EnableAutoConfiguration, and @Configuration.
+4)What is @Transactional in Spring Boot? Explain with a real-time example.
+5)Explain how AOP is implemented in Spring Boot with a real-time example. Describe different types of advice and their use cases.
+6)Explain RestTemplate, WebClient, and OpenFeign with structure and examples. Compare them and mention when to use each.
+7)What happens if we replace @Controller, @Service, or @Repository with @Component in Spring Boot?
+8)Which HTTP method is more secure: GET or POST? Explain PUT and PATCH methods and their differences.
+9)Explain first level cache, second level cache, and external cache in Hibernate and Spring Boot.
+10)What is immutability in Java? Explain different ways to create immutable classes including Lombok and Java Records.
+11)What are Java Records? How are they used in real-world Spring Boot applications?
+12)How do you prevent multiple concurrent requests from hitting the database at the same time in a high-traffic system?(Factset asked me).
+13)Explain how Spring Boot connects to databases in real-time enterprise applications.How do you configure and use multiple databases in a Spring Boot application?
+14)Explain the lifecycle of a Spring bean with initialization and destruction methods.**********VVVVIMP.
+15)What Java 17 features did you use after migration and what challenges did you face?
+16)How do you handle exceptions globally in a real-world Java / Spring Boot application with multiple custom exceptions? Explain the complete flow.
+17)

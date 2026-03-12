@@ -1,0 +1,35 @@
+1).Explain how the lambda expression (a, b) -> a + b works with the CalculateSum interface.
+2).Given a list of integers, write a Java program to find all the missing numbers between consecutive elements after sorting the list.
+3).Given an integer array, find all the duplicate elements.
+4).Given a string containing only the characters '(' , ')' , '{' , '}' , '[' , ']', determine if the input string is valid.A string is valid if:Open brackets are closed by the same type Open brackets are closed in the correct order Input: "{[()]}" Output: true Input: "{[(])}" Output: false
+5).Swap two strings without using third variable.
+6)Given an array of integers, find all numbers that start with digit 2(including negative numbers like -21).[withOut using StreamApi and using Stream APi also]
+7).What is the order of execution of static blocks, instance blocks, constructor, and main method in Java?
+8)Given an integer, convert it to a Roman numeral.
+9).Reverse the elements of an array without using any extra array.
+10).Given an array of integers, return an array where each element is the product of all other elements except itself.
+11).Convert given list to map with element as key and index as value? list = ("apple", "banana", "citrus", "manogo", "guava")
+12).Find the Department-wise min & max salary using Teeing method in Java12.
+13)How many times particular Number occured in the above list.
+14).From strudent marks,Add 20 marks to students who scored less than 60, Then calculate the total marks of students whose final marks are greater than 60.
+15)Write a Java program to find common elements between the two arrays using nested for loops.
+16)Find the maximum repeated (most frequent) element in an array.
+17)Find the second maximum element from an array/list. Handle duplicate values correctly.
+18)Given a list of integers and a target sum, find all unique pairs whose sum equals the target. Avoid duplicate/reversed pairs.Input  : [1,2,3,4,5,6,7,9,8] Target : 8 Output : (1,7), (2,6), (3,5)
+19).Find the first non-repeated and repeated character in a string while preserving order.
+20)You are given a List<Object> in Java that contains a mix of Integer and String elements, for example:List<Object> mixedList = List.of(1, "hello", 42, "world"); Write a Java program to separate the integers and strings into two different lists using Java Streams. After separation, the program should print the lists of integers and strings separately.
+21)You are given a List<String> in Java that contains a mix of numeric strings and non-numeric strings, for example:List<String> listOfStr = List.of("1", "2", "ramu", "3", "seetha");
+Write a Java program to collect only the numeric values from the list into a List<Integer> using Java Streams. Strings that cannot be converted to integers should be ignored.
+Expected Output:[1, 2, 3]
+
+1. Count number of characters in a given senetenss (excluding spaces).
+2. Count number of words in a given string
+3. Count total occurrences of a given character (l) in a sentence.
+4. Reverse the whole sentence AND reverse each word.
+5. Convert even-position words to lowercase and odd-position words to uppercase.
+6. Count lowercase, uppercase, digits, and special characters in given Alphanumaric sentense.
+7. Find first repeated and first non-repeated character in a given senetens.
+8. Given a sentence, count how many times each vowel appears (a, e, i, o, u) ignoring spaces and case. Also, print only the vowels that appear more than once.
+9. Find Duplicate Characters in a String(use set).
+10.Explain difference between String.join() and Collectors.joining() with use cases.
+11.Given an array of strings, sort it such that: Strings are sorted by length in ascending order If two strings have the same length, sort them in alphabetical order (case-insensitive)

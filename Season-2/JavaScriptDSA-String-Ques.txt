@@ -1,0 +1,20 @@
+============================================ STRING QUES =======================
+1) Remove Duplicates from a String I/p:hello world baby o/p:helo wrd bay(2 prog preserve and non preserbe spaces)
+2) Reverse Words in sentence I/p:hello world baby o/p:olleh dlrow ybab
+3) Count Palindromes in string I/p:Madam o/p:2(ada,madam) I/p:aaa o/p:3(aaa,aa,aa)?
+4)Let arr = [1,1,1,2,3,4,4,4,4,5,4,5,4,5,5,5,5,5,8,9,4] Inthis array I want to find most repeated element how?
+5)find the Longest Palindromic substring from given string?
+6)Find the Longest Common Substring from given string.
+
+
+=================================Arrray questions ============
+1)Find duplicates from given array
+2)Find given two strings are anagram or not? check question on Group Anagram
+3) Two sum or taget sum problem I/p: [-5,-4,-3,-2,0,2,4,6,8] targetSum: 0
+4)Product of array except self
+5)Maximum Subarray sum and return max max subarray also
+5)Given an array of integers and a number k, write a function that finds the maximum sum of any consecutive subarray of length k.
+6)containerWithMostWater two pointer approach
+7)Insert Intervals ques leetcode ques No:57.
+8)Merge Intervals | Leetcode 56
+9)Counting Unique Numbers Problem I:p=[1, 1, 2, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10,9] o/p:10

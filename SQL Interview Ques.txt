@@ -1,0 +1,54 @@
+                                  ************SQL QuerriES************************
+
+1) From Friends table having fields id, Name, Friend_id, now find the name&corrosponding friend name?
+
+2) Find third maximum salaried person from table.
+
+3) grouping by department name and count number of employee in each department.
+
+4) Get the employee details who have the same salary?
+
+5) Retrive duplicate records from employe table?
+
+6) Departmentwise highest salaried prrson from employee table?
+
+7) List the department names where no employees are assigned? (dept table & emplo table)
+
+8) Increse the marks of all the students who are getting lessthan 35 marks.
+
+9) Increse 1000 rupees for their salary for those peoples who are belongs to sales departmet.
+
+10) fetch all dept names having more than 5 employees?
+
+11) Find common employees b/w two departments (Hr dept and sales dept)/
+
+12) List all employee who belongs to specific department using a subquerry?**VVVIMP
+
+
+
+           ********************    SQL QUERRIEES ANSWERS    ****************
+
+1) From Friends table having fields id, Name, FriendId, now find the name&corrosponding friend name?
+
+sol) select fl.empName as firstName, (select empName from Friends1 where friendId= f1.id) from Friends1 f1;
+
+select f1.empName as firstName, f2.empName as secondName from Friends1 f1 LEFT JOIN Friends1 f2 on f2.friendId=f1.id;
+
+2) Find third maximum salaried person from table.
+
+soln) select distinct purchase_amt, FIRST_NAME from CUST_TRANS_DTLS order by purchase_amt desc limit 2,1;
+
+4)Get the employee details who have the same salary?
+
+select distinct FIRST_NAME, salary from employee e1 where e1.salary = (select salary from employee ce2 where e1.id != e2.id);
+
+7) List the department names where no employees are assigned? (dept table & emplo table)
+
+select dept_name from department where dept_name NOT IN (select dept_name from employee)*VWWIMP 9) Increse 1000 rupees for their salary for those peoples who are belongs to sales departmet.
+
+soln) update employee set salary salary + 10000 where dept_id = (select dept_id from dept where dept_name="sales")
+
+12) List all employee who belongs to specific department using a subquerry?
+
+select * from employee where dept_id = (select dept_id from employee where dept_name= "HR")
+

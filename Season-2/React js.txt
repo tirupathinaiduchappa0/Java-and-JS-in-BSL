@@ -1,0 +1,15 @@
+1)Create  a sample form and add data and print in console.
+2)fetch data from api and display it in table format.
+3)write ContextApi skeleton.
+4)write Redux tool kit skelton.
+5)write redux syntax if possible
+5)Difference between useParams and useLocation with example?
+6)Options and patch method along with CRUD operations
+7)Explain about Webpack and parcel Bundlers?
+
+
+
+
+===================================================******************************************===================================
+
+1)Explanin what is Babel Transpiler?

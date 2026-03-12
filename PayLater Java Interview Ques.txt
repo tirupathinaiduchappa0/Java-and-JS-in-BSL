@@ -1,0 +1,236 @@
+                                               *************   STRING QUESTIONS   *************************
+
+
+1) From the list sort the elements and find all the missing elements from list i/p: (3,1,7,4,9,15,8)
+
+1)input String s = "tirupathiNaiduChappa"; output = "tirupthi naidu chappa"; camel case conversion to normal case & add space befor uppercase letters and convert all words in to lower case.
+
+1) java 8 programme to capitalize first letter of each word in string.
+
+1) from the given String str = "information", replace "form" with XXX;
+
+2) from the given word String str "Independence" replace firse two letters with XX and last two lwtters with YY. 
+
+2) from the given strings "InDiA" replace all uppercase letters with X and all lowerase letters with Y.
+
+3.WAP count the number of characters in given string
+
+4. WAP count the number of words in given Sentence.
+
+5.Count total number of occurences of a given charcter in give sentence
+
+6. Wap to reverse the whole sentence and reverse each word in the sentense
+
+7. In a given sentence find how many small letters, how many capital letters, how many numbers, how many alphanumarics are there (Hint::: Regex, chars)
+
+8. Find First Repeated char and First Non repeated char in given sentense
+
+9. Convert even position words in to uppercase and odd position words in to lowercase in a given sentence
+
+18.print only ood positions words from senetence
+
+11.Print the sum of the integers in an integer array
+
+12.Print the average of the integers in an integer array
+
+13. Merge two arrays and print the output in the console and find uique and duplicte elements from that array
+
+14. Find the max number from an array and print.
+
+15. Find the min length word from an array.
+
+16. Reverse the array of elements use Exisisting array only.
+
+18) Sort the numbers by using normal for loops (dont use inbuilt methods).
+
+19) Find the second maximum number from the array if we have duplicate elements from the array?
+
+20) Reverese an array of Numbers using java8(Donyt use any inbuilt Methods)?
+
+21) How to count the occurences of every even character from the given string name="tirupathinaiduchappa"?
+
+22) For the given Strings "I am good", string needs to be reversed and we Need to preserve the spaces, expected o/p: is "d oo gmai";
+
+23) Find successive characters conunt String st="aaabbabcc" o/p: a: 3,b:2,a:1,b:1,c:2.
+
+                       ****************** USING STREAM API   *****************************
+
+1)int a=7 & b=10, add these variables by using javas lambada expression?Basic question (Hint:::: Use interface, abstractmthd with with two variables and write lambda expression in another class like InterfaceName addition (a,b)->a+b) like this
+
+1) form this array ("P", "A", "XYZ", "AA", "BB", "c", "DDD", "DDDDD"), Based on string length i want assending order and if string length is equal then i want alphabet order in java 8.
+
+2) From the given string I/P: String st = "I love my country which is India" find howmany times each vowel is repeated O/P: (a=1, u=1, e=1, 1-5, 0-2)
+
+3)find only duplicates form array of numbers Hint:: [[[filter(i -> Collections. frequency (list, i) > 1]]] 4)i want to add 10 marks each student who are getting morethan 70 marks (Hint:: use Peek mthd) (VVVIMP)
+
+5)i want total marks of all the students with marks graterthan 60 after 20 marks havebeen added to these students who scored lessthan 60.
+
+6) . In array of strings how many times particular string is repeated and howmany time each string repeated and find the maximum number of times repeated string?
+
+7).peek mthd in streams and paralle stram
+
+8).i/p: "I Love My India", o/p: "I-Love-My-India"
+
+9)find give number is even or odd without using modulous operator (Bitwise operator)
+
+10) Find smallest missing numer from an array [3,4,7,6,10]
+
+11) what is summarizing in stream API.
+
+12) In a given string how many time each vowel is repeated
+
+13) find the first Repeated and non repeated character in given sting javas
+
+14) print the common element between given two arrays
+
+15) Find the numbers which are starting with 2 only {2, 22, 343, 234, 267, 222, 567, 987, 212, 543); 
+
+15) From this array add 1000 to each if the number is lees than 200 and print the whole output {2, 22, 343, 234, 267, 222, 567, 987, 212, 543);
+
+15) How many times particular string/number is reapeated in given array.
+
+17) Reverse the individual string for all the strings in the given array--["somu", "Beemu"] 
+
+17)in a given sentence reverese each word i/p: "hi how are you", o/p: "ih, woh, era, uoy"
+
+17) Find the maximum Repeated number in this array (1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5,5, 5,5,6,6,6,6,6,6),
+
+18) First seperate odd and even numbers from the array and then sort odd numbers in assending order and even number in descending order (**VVIMP Hint
+partionBy)
+
+ 19) from array of 10 numbers find first 4 numbers and give the sum of those 4 numbers.
+
+ 20) from array of 18 numbers i want the sum of numers from index 3 to index 7(Skip andLimit)
+
+21) Employess having duplicate salaries, find the second highest salaryied person name and his salary only, Not full Object.
+
+ 22) find the male and female employee count from respective department
+
+23) Find Average employee salary of each department
+
+24) Find Department wise min and max salary of employeee (Hint:::: Collectors.teeing)
+
+25) convert given list of strings in to array 25) convert given list of strings in to Map. of strings.
+
+26) convert given Map in to List.
+
+27) what is the Order of precedence for staticBlock, NonStaticBlock, Constructer and Main Method in java(with and without Object).
+
+28).1) Grouping based on Dept Name/ Dept Id
+
+    2) employee count working on each dept
+
+    3)find the list of active and inactive employees
+
+    4) find second max salary among of all employees (VVVIMP)
+
+    5) find maximum salary from each dept (VVVIMP)
+
+    6) sorting of students based on both name and city
+
+    7) Sorting of employees based on Id Or name (Reverse sorting also).
+
+=================================================================================================================================
+
+1) java 8 to reverse an array of integers in place, (Dont create new array to store result, use the exisisting array).
+
+2) java 8 to find product of all elements except the current element. input is: int[] arr= {1,2,3,4,5); output: [128, 60, 40, 30, 24]
+
+3)java 8 remove duplicates from an array of strings while preserving the original order (Hint:: groupBy, LinkedHasmap:: new, Tolist)
+
+4)j8 Department wise people count and total salary of those people.
+
+5) find the Difference between maximum number and minimum number from given array of numbers (HINT:: Collectors.teeing).
+
+6) Convert given Number in to Roman Number.
+
+7)in how many ways we can create object? what is marker interface, serlization, deserializarion, externalization...etc
+
+8)what is differnce b/w put mapping and patch mapping?
+
+9) How can you access private constructer in another java class? (HINT:: getDeclared Constructer)
+
+
+
+             ******************  SQL INTERVIEW QUESTIONS      **********************888
+
+
+
+EMP Id name Manager Id
+
+     1 ramu null
+
+     2 somu 1    
+
+1)Find Employee name and their manager Name by using self Join. Soln) Select e.name, m.name from EMP as e Join EMP as m ON e. ManerId = m. Id;
+
+(Kanerika Interview L3) (not e.Id m.ManagerId, This is Wrong)
+
+1) Find 3rd highest salary from employee
+
+2) Write a SQL query to fetch all the duplicate records from a table.
+
+3 ) Write a SQL query to fetch the second last record from employee table. 
+
+4) Write a SQL query to display only the details of employees who earn the highest salary and lowest salary in each department from the employee
+
+table.
+
+5) Write a SQL query to display department wise difference between min and max salary.
+
+
+                ***********    SpringBoot Interview Qestionss ***************
+
+1. How does Microservices communicate with each other in SpringBoot?
+
+2. Explain SpringBoot internal working?
+
+3. If you made any changes in config server, is it requried to restart the application?
+
+4. Explain Default & Static & Private Methods in Functional Interface?
+
+5. What is the purpose of Optional Class in Java?
+
+6. Explain Interceptors concept in SpringBoot?
+
+7. Explian SingleTon Design Pattern and how to achieve it?
+
+8.Difference b/w Synchronized map and Concurrent Map?
+
+9. How do you provide Security to your application?
+
+10. How circuit breaker works?
+
+11. Internal working of hashMap?
+
+12. Explain equals and hashcode in Java?
+
+13. What is the purpose of overriding equals and Hashcode methods?
+
+14. What is Method Refernce and how to call parameterized constructures using method reference?
+
+15) What is Executor Frameowrk in Multithreading env and difference between submit & Execute methods in this Framework?
+
+16) Is Java follows Pass by value or pass by reference?
+
+17) Volatail Keyword, Atomic keyword
+
+18) How to resolve concurrent modification exception in Java?
+
+19) What is the purpose of completable feature in Java?
+
+20) What is bean life cycle and how many methods are there as part of bean life cycle?
+
+21) How many ways to inject bean in Spring? what is aware injection?
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+1)Use of Records in Java,diff b/w class and Records.
+2)which is best @RequriedArgsConst or @Autowired or parameterisedConstructure.
+3)Jpa querries on what ever name is possible?
+4)Use of flyway database when comp with sql.
+5)How to configure Multiple databases for single app/single services???
+6)write skeleton for resttemplate,Webclient,Rest client?
+7)what makes webclinet acts as both synchronous(Mainly) and asynchronous?
+8)Internal working of Circuit Breaker(closed->Open->HalfOpen)? code snippet channel short video watch.
+9)FetchType Lazy vs Eager during ManyToOne mappings
+ 

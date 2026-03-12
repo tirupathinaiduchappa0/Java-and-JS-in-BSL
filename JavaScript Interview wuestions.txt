@@ -1,0 +1,231 @@
+              *********************     JavaScript Interview wuestions      ******************
+
+1)Tell me your 2 favourite topics of javascript? (My ans is:: arrow Functions & destructing).
+
+1) find duplicate elements from given array.
+
+2)find the common elements between two given arrays.
+
+3) How to find the max and min number from given array.
+
+4)find the second maximum element from given array (Hint:: duplicates remove, sort, find second last);
+
+5)find dupliactes from array of strings and unique elememts also seperately?
+
+6) Remove the first largest number form array. (Hint:: duplicates remove, sort, pop(arr(arr.length-1)));
+
+7)find the smallest missing Number from the given array, i/p: array [3, 5, 4, 7, 9, 10]. o/p:8
+
+8) find the missing Numbers from the given array i/p: array [3, 5, 4, 7, 9, 10] o/p: [6,8]
+
+9) From the given array [3, 4, 2, 5, 7, 13, 2, 5, 78, 9, 23, 23, 28, 4, 12, 3, 7] seperate even and odd numbers and arrange even Numbers in a assending and
+
+odd numbers in Desceinding (In simple away)....
+
+10) Find the number of vowels in a given senetence String "I Love my country";
+
+11) How many times each vowel is repeated from the given string String I Love my country";
+
+12) Reverse the given String str = I love India";
+
+13) Find Howmany times each character is repeated form the given String; 14) Find the maximum Number of times Repeated chracter from given string.
+
+14) Find the Maximum length word from the given String.
+
+15) How swap two strings without using third variable.
+
+16) How to find given two arrays are equal or Not arr1 = [1,2,3] arr2 = [2,3,1]. 17) How to convert first letter of each word in to Uppercase in a given sentense.
+
+18) Replace Underscore with space and capitalize the each in given sent, i/p: str "i_am_good_boy";
+
+19) find the Maximum repeated element from given array [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5];
+
+28) from array of objects groupingBy gender and find howmany male ad femlae objects.
+
+21) Reverese each word in the given sentense.
+
+21) count How Many times "L" repeated in the given String "Hello world".
+
+22) How to empty an array in js (Do not reset it to a new Array and do not loop through to pop each value). ANS > arr.length = 8;
+
+23) write js prog that returns a passed String with letters in alphabetical order.
+
+24)write js prog to find last 4 elements of given array.
+
+25) Generate a 4 digit Random OTP number.
+
+26)print the count and print "Happay Nwe year" msg after 3 second done; 27) what does every method will do in js, explain with example.
+
+28) what is output of below prog Const letters = ['A', 'B', 'C', 'D'); letters.splice(0,1), Letters, slice(0,1), letters. shift().
+
+29) from the given array find the product of even numbers. 
+
+30) how to concat one two arrays without using concat and spread operator (Apply method and call method and bind Method);
+
+30 ) array ["Rajini", "Ramu", "Reethu", "Suhash", "Soundarya", "Sree", "Aman", "Amar", "Chiru"), group By first character. 
+
+31) How can you convert this array in to flat array i/p: [1, [1, 2, 3], [1, 2, [7], e], 9, 8, [5]];
+
+32) find given number is even or odd without using Arithmatic operator (Hint: Use Logical operator)
+
+33) print the current time in HH:MM:SS in javaScript.
+
+34) create a model which needs to close on click of negative space?
+
+34) Debounce function impleamentaion and ployfill for it and Throttling function and polyfill for it.
+
+35) what is event propagation and bubling and capturing (Trickle down). (Hint:: top to bottom and bottom to top). 36) what is event Delegation?(Hint:: we need to add eventlistner to the parent element insted of adding them to all the descendent elements)***
+
+37) Tell me some features of Es6 and explain them?
+
+38) what is shallow copy and Deep copy of an object in js?
+
+*)create a counter to find the number of days before 2025 jan 1st. (Ans should in form of 100Days 05Hrs 20Min 09 sec) (VVVImp)
+
+*)create a function to get current date in general format (DD/MM/YYYY) and current time in HH:MM:SS
+
+*)How to remove Duplicate objects from an array of objects.
+
+39) find the common elements between two objects.input1 {a: 1, b: 2, c: 3, d: 4); input2 = (d: 4, e: 5); output: (d:4) 48) to find sum of all elements except the current element i/p=[1,2,3,4,5,6,7), op=[27, 26, 25, 24, 23, 22, 21);
+
+41) Is it possible in Js a function can have multiple return statements and all return statements needs to work? (HINT:: generators concept in Es6)
+
+42) write js programme to convert given numaric number in to Roman Number?
+
+43) Give one best example for arrow function over normal functin and normal function over arrow function.
+ 
+44) give me one good example for CallBack hell issue and how can you overCome it.
+
+45) from the given array targetArray = [10, 20, 30, 40, 50, 60, 70, 80, 98);, targetSum is 100, output should be in stored in Map or Object [[10, 90], [20,80], [30, 70], [40, 60], [50, 50], [60, 40], [70, 30], [80, 20]] sotres this output in Map/Object. 
+
+46) from 1 to 100 numbers find sum of all even numbers and all odd numbers seperately.
+
+47) Reverse the full sentense and each word also from the given sentense. 48
+
+48) For the given String s = "I am good", string needs to be reversed and we Need to preserve teh spaces. expected o/p: is "d oo gmai"; 15) explain how setTimeout and setinterval works & what is the main differnce b/w them?
+
+49) How to use Map in JavaScript?
+
+50) Find fibanoci series of length 10?
+
+=========================================================================================
+
+
+1) what is output for this prog
+
+var x = 10;
+
+var fun function () {
+
+console.log("x value is::", x);
+
+var x = 20;
+
+}
+
+fun();
+
+2) create a function multoplyBy Two (user) that multiples all numaric property values by 2.
+
+let user = {
+
+name: "ramu",
+
+age: 20,
+
+salary: 1000
+
+};
+
+3) input= { name: "ramu", age: 30, gender: "male"), output=[[name, ramu], [age, 30], [gender, male]];
+
+4)**const personData = {
+
+name: "seetha",
+
+address: {
+
+street: "wallstreet", personaAddress: { Mobile: "7995600550" }
+
+}
+
+}; 
+question is destructre the above data. If the above person data is null then how you can destructre it.
+
+2) WRITE CURRING PROGRAMME FOR THIS INPUT sum(1)(2)(3);
+
+3)) WRITE CURRING PROGRAMME FOR THIS INPUT sum(1) (2) (3) (4) (5) (6) (7) (8); (Hint::Curring for infinite series)
+-----------------------------------------------------------------------------------
+
+1)differnce b/w and === in javaScript. (== -> value, ===> both value and Type);
+
+2) what is the differnce between Splice and Slice methods in js.
+
+3) How can you call a function in differnt ways. (Hint: call, Apply, Bind, literal);
+
+4) why we are preferring axios over fetch to make api calls?
+
+4) what is Browser Throttling?
+
+5) what is Json. Stringfy and Json.parse? and where we will use these.
+
+6) what is output console.log([..."ramu"])? ans: [r,a,m,u];
+
+7) How can js function can have multiple return statements (Generators Concept in Es6)?
+
+8) what is local storage and sesssion storage and tell me some difference b/w them?
+
+9) How broser understands java script? (babel script)?
+
+10)what is Dom and Bom (Browser Object Model)?
+
+11) Explain how clousers working in js?
+
+12) what is hoisting and temporal Dead Zone in Es6?
+
+13) How this keyword behavious in Normal function & Arrow Functions?
+
+14) Explain how js code execution process taken place (memeoray alloation Phase, code executionPhase (global execution context, callstack, asm functions (browser), task Queue/callback Queue, mircotask Queue, eventLoop)?
+
+15) explain how setTimeout and setinterval works & what is the main differnce b/w them?
+
+16) explain some es6 features?
+
+17) what is shallow copy (Object reference) and Deep copy/object clone(Object reference)?
+
+18)what is call back hell & how to overcome it & explain the promise concept?
+
+19) explain call apply, bind methods in js?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

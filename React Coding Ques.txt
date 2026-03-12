@@ -1,0 +1,25 @@
+////////////////    React Js macine Coding  ////////////////////////////
+
+1)Call a dummy API and display user names in the browser
+→ Fetch data from a sample API (like JSONPlaceholder) using useEffect and display the list of user names dynamically in the UI using React state.
+
+2)Create a counter with increment and decrement buttons
+→ Build a simple counter component using useState where clicking “+” increases and “−” decreases the count value displayed on the screen.
+
+3)Create a form and print entered data in the console
+→ Design a form with input fields, capture user input using controlled components, and log the submitted form data to the browser console.
+
+4)Filter names from a list of names based on input value
+→ Implement a search input that filters and displays names from a predefined list in real time based on the user’s typed text.
+
+5)Toggle the visibility of a message using useState
+→ Create a button that uses React’s useState hook to conditionally show or hide a message like “Hello World” based on the current state value.
+
+6)Display current time with auto-update using useEffect
+→ Use useState to store the current time and useEffect with setInterval to update and display the time automatically every second.
+
+7)Pass a list of items from parent to child component using props
+→ Build a parent component that sends an array of items to a child component through props, where the child renders the items as a list.
+
+8)Pass data from child to parent component and render it
+→ Create a child component that sends a list of items back to the parent using a callback function passed as a prop, allowing the parent to render the received data.
