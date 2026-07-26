@@ -8,13 +8,13 @@ import java.util.Optional;
 
 public class SecondMaxNumFromArray {
 	
-	//Reverse of string
+	
 	public static String reverseFor(String str) {
-	    String result = "";
-	    for (int i = 0; i < str.length(); i++) {
-	        result = str.charAt(i) + result;  // prepend
+	    StringBuilder result = new StringBuilder();
+	    for (int i = str.length() - 1; i >= 0; i--) {
+	        result.append(str.charAt(i));
 	    }
-	    return result;
+	    return result.toString();
 	}
 
 	public static void main(String[] args) {
@@ -35,11 +35,11 @@ public class SecondMaxNumFromArray {
 		System.out.println("second max without sorting::::: " + secMax);
 
 		for (int i = 0; i < list.size(); i++) {
-			for (int j = 0; j < list.size() - 1; j++) {
-				if (list.get(j) > list.get(j + 1)) {
-					int temp = list.get(j);
-					list.set(j, list.get(j + 1));
-					list.set((j + 1), temp);
+			for (int j = i +1; j < list.size(); j++) {
+				if (list.get(i) > list.get(j)) {
+					int temp = list.get(i);
+					list.set(i, list.get(j));
+					list.set((j), temp);
 				}
 			}
 		}
@@ -62,14 +62,14 @@ public class SecondMaxNumFromArray {
 	
 		Integer[] array = { 5, 2, 6, 1, 5, 12, 12, 8, 5, 8, 8, 3 };
 
-		for (int i = 0; i < array.length; i++) {		
-			for (int j = 0; j < array.length - 1; j++) {
-				if (array[j] > array[j + 1]) {
-					int temp = array[j];
-					array[j] = array[j + 1];
-					array[j + 1] = temp;
-				}
-			}
+		for (int i = 0; i < array.length; i++) {        
+		    for (int j = i + 1; j < array.length; j++) {
+		        if (array[i] > array[j]) {
+		            int temp = array[i];
+		            array[i] = array[j];
+		            array[j] = temp;
+		        }
+		    }
 		}
 		System.out.println("sorting of nums without using for loop" + Arrays.toString(array));
 
@@ -83,7 +83,6 @@ public class SecondMaxNumFromArray {
 		}
 
 		System.err.println("secondMax::::" + secondMaxEle1);
-		
 		
 		
 

@@ -35,10 +35,15 @@ public class QuestinsOnEngineering {
 
 		list.add(e6);
 
-		Map<Object, List<Object>> PositionsinEachDept = list.stream().collect(
-				Collectors.groupingBy(x -> x.getDept(), Collectors.mapping(x -> x.getRole(), Collectors.toList())));
+		Map<Integer, List<String>> positionsInEachDept =
+			    list.stream().collect(
+			        Collectors.groupingBy(
+			            Engineering::getDept,
+			            Collectors.mapping(Engineering::getRole, Collectors.toList())
+			        )
+			    );
 
-		System.out.println("PositionsinEachDept:::::" + PositionsinEachDept);
+			System.out.println("Positions in Each Dept: " + positionsInEachDept);
 	}
 
 }

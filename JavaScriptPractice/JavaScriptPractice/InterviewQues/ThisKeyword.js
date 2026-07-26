@@ -1,3 +1,8 @@
+//Strict Mode and Non-strict Mode
+
+/*Strict mode in JavaScript is a way to run code in a safer, more controlled environment by adding `"use strict"` at the top of a file or function, whereas non-strict (sloppy) mode is the default behavior where JavaScript is more permissive and allows certain unsafe practices. The key difference can be clearly understood using the `this` keyword. For example, if we define an object like `const obj1 = { name: "React", show() { console.log(this.name); } };` and then assign `const fun = obj1.show;` and call `fun();`, in non-strict mode this becomes a normal function call, so `this` points to the global object (like `window` in browsers), and since `window.name` is usually undefined or empty, the output is `undefined`. However, in strict mode (by adding `"use strict";`), `this` inside such a function becomes `undefined`, and accessing `this.name` will throw a `TypeError`. Another major difference is that strict mode prevents accidental global variables—writing `x = 10;` without declaring it works in non-strict mode but throws a `ReferenceError` in strict mode. It also converts silent failures into explicit errors; for example, assigning to a non-writable property fails silently in non-strict mode but throws a `TypeError` in strict mode. Additionally, strict mode disallows duplicate function parameters, such as `function sum(a, a) {}`, which is allowed in non-strict mode but causes a `SyntaxError` in strict mode. Overall, strict mode enforces better coding practices, avoids hidden bugs, and makes JavaScript behavior more predictable, especially in cases involving `this` binding and error handling.*/
+
+
 const obj = {
   name: "JS",
   show() {

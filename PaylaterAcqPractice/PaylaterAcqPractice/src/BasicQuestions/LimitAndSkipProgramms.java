@@ -67,7 +67,7 @@ public class LimitAndSkipProgramms {
 		
 		s2= sb.substring(0,s1.length());
 		s1= sb.substring(s2.length());
-		System.out.println(s1 + s2);
+		System.out.println(s1 + "+++" + s2);
 
 		//i/p: "I Love My India", o/p: "I-Love-My-India";
 

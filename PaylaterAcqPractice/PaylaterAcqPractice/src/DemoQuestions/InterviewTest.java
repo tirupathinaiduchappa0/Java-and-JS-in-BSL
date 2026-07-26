@@ -26,7 +26,7 @@ public class InterviewTest {
 	}
 
 	public static void methodTwo(MyObject o) {
-		o.value = 150;
+		o.value = 150; //pass by value.
 	}
 
 	public static void methodThree(MyObject o) {

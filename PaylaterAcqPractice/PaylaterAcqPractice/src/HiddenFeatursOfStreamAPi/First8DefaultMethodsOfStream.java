@@ -100,7 +100,7 @@ public class First8DefaultMethodsOfStream {
 				.collect(Collectors.teeing(Collectors.maxBy(Comparator.comparingInt(x -> x)), // Collectors.maxBy(Integer::compareTo)
 						Collectors.minBy(Comparator.comparingInt(x -> x)), // Collectors.maxBy(Integer::compareTo)
 						(el, e2) -> Map.of("max", el.get(), "min", e2.get())));
-		System.out.println("winMaxMap" + minMaxMap);
+		System.out.println("MinMaxMap" + minMaxMap);
 
 		// 6=========
 		// concat method

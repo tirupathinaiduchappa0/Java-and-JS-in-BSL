@@ -94,8 +94,8 @@ const wordwithLength1 = stringsent
 let a = 5;
 let b = 6;
 a = a + b; //11
-b = a + b; //5
-a = a + b; //6
+b = a - b; //5
+a = a - b; //6
 //console.log(a, b);
 let x = "Ramu";
 let y = "Beemu";

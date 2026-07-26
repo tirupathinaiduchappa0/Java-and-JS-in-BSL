@@ -14,36 +14,25 @@ public class TargetSumFromArray {
 
 		List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 9, 8);
 
-		Map<Integer, Integer> map = new HashMap<>();
-
-		int targetNum = 8;
-		for (int i : list) {
-			int complementNum = targetNum - i;
-			if (complementNum > i) { // seen.contains(complementNum)
-				map.put(complementNum, i);
-			}
-		}
-		System.out.println("Map:::: " + map);
-
 		Set<Integer> seen = new HashSet<>();
 		Map<Integer, Integer> map1 = new HashMap<>();
 
 		int targetNum1 = 8;
 		for (int i : list) {
 			int complementNum = targetNum1 - i;
-			if (seen.contains(complementNum)) { // seen.contains(complementNum)
+			if (seen.contains(complementNum)) { 
 				map1.put(complementNum, i);
 			}
 			seen.add(i);
 		}
-		System.out.println("Map with set is:::: " + map);
+		System.out.println("Map with set is:::: " + map1);
 
 		// Now return the indexs insted of values
 
 		List<int[]> listB = new ArrayList<>();
 		for (int i = 0; i < list.size(); i++) {
 			for (int j = i + 1; j < list.size(); j++) {
-				if ((list.get(i) + list.get(j)) == targetNum) {
+				if ((list.get(i) + list.get(j)) == targetNum1) {
 					// System.out.println(list.get(i) + " " + list.get(j));
 					listB.add(new int[] { i, j });
 				}

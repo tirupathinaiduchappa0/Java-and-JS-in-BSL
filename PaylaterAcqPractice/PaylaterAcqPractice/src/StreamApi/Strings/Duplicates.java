@@ -96,7 +96,7 @@ public class Duplicates {
 
 		String st = "I love my country which is India";
 
-		String wordsMerged = String.join("", st.split(""));
+		String wordsMerged = String.join("", st.split(" "));
 
 		// System.out.println("wordsMerged :: + wordsMerged);
 

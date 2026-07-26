@@ -35,18 +35,26 @@ public class ConversionFromOneTypeToAnotherType {
 
 		List<String> fruits = Arrays.asList("apple", "banana", "citrus", "manogo", "guava");
 
-		// IntStream produces primitive int,Map requires Integer boxed() converts int →
-		// Integer
-		Map<Integer, String> ConvertListInToMap = IntStream.range(0, fruits.size()).boxed()
-				.collect(Collectors.toMap(i -> i + 1, fruits::get));
-
 		Map<Integer, String> map = new HashMap<>();
 		for (int i = 0; i < fruits.size(); i++) {
-			map.put(i + 1, fruits.get(i));
+		    map.put(i + 1, fruits.get(i));
 		}
 		//System.out.println("list to map is::" + map);
 
 		//System.out.println("ConvertListInToMap ::" + ConvertListInToMap);
+		
+		/*When does ConcurrentModificationException happen?
+
+				It typically occurs when:
+
+				You modify a collection while iterating over it
+				Using an iterator / enhanced for-loop
+
+				Example that causes exception:
+
+				for (String fruit : fruits) {
+				    fruits.add("new"); // ❌ modifying while iterating
+				}*/
 
 		Map<Object, Object> ConvertlistInToMap1 = fruits.stream()
 
@@ -59,27 +67,6 @@ public class ConversionFromOneTypeToAnotherType {
 		Map<Object, Object> ConvertListInToMap2 = fruits.stream().collect(Collectors.toMap(x -> x, x -> x.length()));
 
 		//System.out.println("ConvertListInToMap:::" + ConvertListInToMap2);
-
-		// 3. convert given Map in to List. (Map in to List)
-
-		Map<String, Long> mapAsOutput = list.stream()
-				.collect(Collectors.groupingBy(x -> x.toLowerCase(), TreeMap::new, Collectors.counting()));
-
-		System.out.println("mapAsOutput" + mapAsOutput);
-
-		// TreeMlap will give in alphabetical order where as LinkedHashMap will give
-		// insertion order(it preserves the order) // here above i am getting map as
-		// output i will convert this map in to List.
-
-		List<List<Long>> converMapToList = Arrays
-				.asList(mapAsOutput.entrySet().stream().map(x -> x.getValue()).collect(Collectors.toList()));
-
-		System.out.println("converMapToList::" + converMapToList);
-		// Generate 10 Random numbers
-
-		Random rand = new Random();
-
-		Stream.generate(rand::nextInt).limit(10).map(x -> x * 100).forEach(x -> System.out.println(x));
 
 	}
 }

@@ -98,9 +98,7 @@ public class QuestionsOnDept {
 		long r2 = list.stream().filter(x -> "active".equals(x.getStatus())).count(); // using partion By find active and
 																						// inactive and similar way find
 																						// even and odd
-		Map<Boolean, List<Department>> oup = list.stream()
-				.collect(Collectors.partitioningBy(x -> "active".equals(x.getStatus())));
-
+		
 		list.stream().collect(Collectors.partitioningBy(x -> x.getStatus() == "active")).forEach((key, value) -> {
 			if (key) {
 				// System.out.println("Active is:::" + value); I
@@ -114,8 +112,6 @@ public class QuestionsOnDept {
 		Optional<Department> output = list.stream().sorted(Comparator.comparingDouble(Department::getSalary).reversed())
 
 				.skip(1).findFirst();
-
-		// if we have duplicate salaries see the last progrrammin this file
 
 		// System.out.println(output.get());
 		// By using max/min keyword

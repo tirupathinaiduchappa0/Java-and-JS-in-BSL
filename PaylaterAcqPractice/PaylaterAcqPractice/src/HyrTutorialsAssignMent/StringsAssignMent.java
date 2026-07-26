@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -109,11 +110,20 @@ public class StringsAssignMent {
 
 		// LinkedHashMap preserves the insertion order. where as tree map will give in
 		// alphabetical order.
-		Object firstNonRepetedChar = Arrays.stream(wordIs.split(""))
-				.collect(Collectors.groupingBy(x -> x, LinkedHashMap::new, Collectors.counting())).entrySet().stream()
-				.filter(x -> x.getValue() > 1).map(x -> x.getKey()).findFirst();
-		System.out.println("firstlonRepetedChar" + firstNonRepetedChar);
+		Optional<String> firstNonRepeatedChar =
+			    Arrays.stream(wordIs.split(""))
+			        .collect(Collectors.groupingBy(
+			            x -> x,
+			            LinkedHashMap::new,
+			            Collectors.counting()
+			        ))
+			        .entrySet()
+			        .stream()
+			        .filter(x -> x.getValue() == 1)
+			        .map(Map.Entry::getKey)
+			        .findFirst();
 
+			System.out.println("firstNonRepeatedChar: " + firstNonRepeatedChar);
 		// 8.print only odd positions words frm senetence
 
 		List<String> oddPositionWords = IntStream.range(0, abcd.size()).filter(i -> (i & 1) != 0).mapToObj(abcd::get)
